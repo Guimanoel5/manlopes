@@ -16,3 +16,37 @@
 footer{border-top:1px solid var(--line);padding:35px 0}.footer{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:13px}.footer .logo{color:white}.footer div p{margin-top:5px}
 @media(max-width:850px){.nav nav,.nav>.btn{display:none}.menu-btn{display:block}.nav nav.open{display:flex;position:absolute;top:76px;left:0;right:0;background:#0d111a;padding:25px;flex-direction:column;border-bottom:1px solid var(--line)}.hero{padding:70px 0}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:20px}.hero-visual{height:420px}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.plans{grid-template-columns:1fr}.plan.featured{transform:none}.cta-content{flex-direction:column;align-items:flex-start}.footer{flex-direction:column;gap:20px;text-align:center}}
 @media(max-width:520px){.hero h1{font-size:44px}.hero-actions{flex-direction:column}.cards,.steps{grid-template-columns:1fr}.section{padding:75px 0}.hero-stats{gap:20px}.phone{transform:scale(.86)}.nfc-card{right:-10px}.cta h2{font-size:34px}}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+
+    fill: white;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+}
