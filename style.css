@@ -1652,3 +1652,245 @@ footer {
     padding: 20px;
   }
 }
+
+/* =========================================
+   CONTATO SIMPLES
+========================================= */
+
+.contact {
+    position: relative;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+/* brilho no fundo */
+
+.contact::before {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    background: rgba(91, 124, 255, 0.08);
+
+    filter: blur(120px);
+    border-radius: 50%;
+
+    top: -150px;
+    left: -150px;
+
+    pointer-events: none;
+}
+
+
+/* CONTEÚDO */
+
+.contact-simple {
+    position: relative;
+    z-index: 1;
+
+    max-width: 850px;
+}
+
+
+/* CABEÇALHO */
+
+.contact-header {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.contact-header h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.05;
+
+    margin: 12px 0 20px;
+
+    letter-spacing: -2px;
+}
+
+.contact-header h2 span {
+    background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--purple)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.contact-header .section-text {
+    max-width: 600px;
+}
+
+
+/* BOTÕES */
+
+.contact-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    max-width: 700px;
+}
+
+
+/* BOTÃO */
+
+.contact-button {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    border: 1px solid var(--line);
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.contact-button:hover {
+    transform: translateY(-4px);
+
+    background: var(--surface2);
+
+    border-color: rgba(91, 124, 255, 0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ÍCONE */
+
+.contact-button-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background: rgba(91, 124, 255, 0.12);
+
+    font-size: 21px;
+}
+
+
+/* TEXTO */
+
+.contact-button-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.contact-button-text span {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    color: var(--muted);
+}
+
+.contact-button-text strong {
+    font-size: 16px;
+
+    color: var(--text);
+}
+
+
+/* SETA */
+
+.contact-button-arrow {
+    margin-left: auto;
+
+    font-size: 21px;
+
+    color: var(--blue);
+
+    transition: transform 0.25s ease;
+}
+
+.contact-button:hover .contact-button-arrow {
+    transform: translateX(5px);
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-button:hover {
+    border-color: rgba(37, 211, 102, 0.45);
+}
+
+
+/* INSTAGRAM */
+
+.instagram-button:hover {
+    border-color: rgba(225, 48, 108, 0.45);
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 700px) {
+
+    .contact-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header h2 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contact {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact-button {
+        padding: 16px;
+    }
+
+    .contact-button-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+}
